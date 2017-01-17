@@ -11,7 +11,7 @@ D:\home\site\wwwroot\env\Scripts>python.exe -m pip install --upgrade -r D:\home\
 from datetime import datetime
 from flask import render_template, url_for
 from FlaskWebProject1 import app
-#import requests
+import requests
 import twilio
 #from twilio.rest import TwilioRestClient 
 
