@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<!--
+	Linear by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		{% if title %}
+    <title>{{ title }} - 4Cast</title>
+    {% else %}
+    <title>Project 4Cast</title>
+    {% endif %}
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="{{ url_for('static',filename='js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/skel-panels.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/init.js') }}"></script>
+		
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/skel-noscript.css') }}" >
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" >
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style-desktop.css') }}" >
+		
+		
+		
+			
+		
+	</head>
+	
+	
+
+	<!-- Header -->
+		<div id="header">
+			<div id="nav-wrapper"> 
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="active"><a href="{{url_for('index')}}">HOME</a></li>
+						<li><a href="{{url_for('about')}}">ABOUT 4CAST</a></li>
+						<li><a href="{{url_for('team')}}">THE TEAM</a></li>
+						<li><a href="{{url_for('services')}}">SERVICES</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+
+		{% block content %}{% endblock %}
+
+		<!-- Footer -->
+		<div id="footer" style="opacity":0.4>
+			<div class="container">
+				<section>
+					<header>
+						<h2>Follow our quest</h2>
+						<span class="byline">learn more about how 4Cast is out-computing poverty</span>
+					</header>
+					<ul class="contact">
+						<li class="active"><a href="https://www.facebook.com/Project4Cast/" class="fa fa-facebook"><span>Facebook</span></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
+	</body>
+</html>
