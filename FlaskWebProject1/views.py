@@ -11,6 +11,7 @@ D:\home\site\wwwroot\env\Scripts>python.exe -m pip install --upgrade -r D:\home\
 from datetime import datetime
 from flask import render_template, url_for
 from FlaskWebProject1 import app
+import json
 import requests
 import twilio
 import twilio.twiml
@@ -56,7 +57,21 @@ def hello_monkey():
 def index():
     # This uses the REST API to send an http request
     #resp = requests.post("https://api.twilio.com/2010-04-01/Accounts/ACe6dfc70070586ef00b1c5a39c6040522/Messages.json", data={"To":"+19707655549","From":"+19709646126","Body":"Hi!"},auth=("ACe6dfc70070586ef00b1c5a39c6040522","2f49cbdc4d91e523accf22158ca269d2"))
-    sendMessage("+19707655549","Hey Jack, I am finally working!")
+    
+    lat = -1.29
+    lon = 36.8
+    #resp = requests.post("https://api.twilio.com/2010-04-01/Accounts/ACe6dfc70070586ef00b1c5a39c6040522/Messages.json", data={"To":"+19707655549","From":"+19709646126","Body":"Hi!"},auth=("ACe6dfc70070586ef00b1c5a39c6040522","2f49cbdc4d91e523accf22158ca269d2"))
+
+
+    # Temp is in Kelvin
+    request_str = "http://api.openweathermap.org/data/2.5/forecast?lat="+str(lat)+"&lon="+str(lon)+"&APPID=d619cd297fd19d7934ea3d5dc626b5a7"
+    resp = requests.post(request_str)
+    data= json.loads(resp.text)
+    #   
+    city_name = data["city"]["name"]
+    print city_name
+    msg = "Hey, Jack, you are in " + city_name
+    sendMessage("+19707655549",msg)
    
     
     """Renders the home page."""
