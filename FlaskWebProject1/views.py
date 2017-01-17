@@ -13,18 +13,38 @@ from flask import render_template, url_for
 from FlaskWebProject1 import app
 import requests
 import twilio
+import twilio.twiml
 #from twilio.rest import TwilioRestClient 
 
 # put your own credentials here 
 ACCOUNT_SID = "ACe6dfc70070586ef00b1c5a39c6040522" 
 AUTH_TOKEN = "2f49cbdc4d91e523accf22158ca269d2" 
 
+callers = {
+    "+14158675309": "Curious George",
+    "+14158675310": "Boots",
+    "+19707655549": "Jack",
+}
+
 
 # Sends a SMS to number with string message as the body
 def sendMessage(number, message):
     resp = requests.post("https://api.twilio.com/2010-04-01/Accounts/ACe6dfc70070586ef00b1c5a39c6040522/Messages.json", data={"To":number,"From":"+19709646126","Body":message},auth=("ACe6dfc70070586ef00b1c5a39c6040522","2f49cbdc4d91e523accf22158ca269d2"))
 
+@app.route("/", methods=['GET', 'POST'])
+def hello_monkey():
+    """Respond and greet the caller by name."""
 
+    from_number = request.values.get('From', None)
+    if from_number in callers:
+        message = callers[from_number] + ", thanks for the message!"
+    else:
+        message = "Shashank, thanks for the message!"
+
+    resp = twilio.twiml.Response()
+    resp.message(message)
+
+    return str(resp)
 
 # @app.route("requestPage")
 # def get_message():
