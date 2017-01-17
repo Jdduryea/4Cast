@@ -32,6 +32,17 @@ callers = {
 def sendMessage(number, message):
     resp = requests.post("https://api.twilio.com/2010-04-01/Accounts/ACe6dfc70070586ef00b1c5a39c6040522/Messages.json", data={"To":number,"From":"+19709646126","Body":message},auth=("ACe6dfc70070586ef00b1c5a39c6040522","2f49cbdc4d91e523accf22158ca269d2"))
 
+
+@app.route('/sms', methods=['POST'])
+def sms():
+    number = "+19707655549"
+    message_body = "I'm a reply message!"
+ 
+    resp = twiml.Response()
+    resp.message('Hello {}, you said: {}'.format(number, message_body))
+    return str(resp)
+
+
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     """Respond and greet the caller by name."""
