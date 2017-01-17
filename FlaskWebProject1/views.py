@@ -35,7 +35,7 @@ def sendMessage(number, message):
 
 
 
-@app.route("/sms", methods=['GET', 'POST'])
+@app.route("/services", methods=['GET', 'POST'])
 def hello_monkey():
     """Respond and greet the caller by name."""
 
@@ -43,7 +43,7 @@ def hello_monkey():
     if from_number in callers:
         message = callers[from_number] + ", thanks for the message!"
     else:
-        message = "Shashank, thanks for the message!"
+        message = "Monkey, thanks for the message!"
 
     resp = twilio.twiml.Response()
     resp.message(message)
