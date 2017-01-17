@@ -1,10 +1,108 @@
-{% extends "layout.html" %}
+<!-- extend base layout -->
+{% extends "base.html" %}
 
 {% block content %}
+	<div class="container">
+	<!-- Logo -->
+				<div id="logo">
+					<h1 style=""><a href="#">4Casting 101</a></h1>
+					<span class="tag">crushing poverty</span>
+				</div>
+			</div>
+		</div>
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+	<!-- Header --> 
 
-<p>Use this area to provide additional information.</p>
+	<body>
+	<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
 
-{% endblock %}
+					<!-- Sidebar 
+					<div id="sidebar" class="4u">
+						<section>
+							<header>
+								<h2>Etiam malesuada</h2>
+							</header>
+							<div class="row">
+								<section class="6u">
+									<ul class="default">
+										<li><a href="#">Donec facilisis tempor</a></li>
+										<li><a href="#">Nulla convallis cursus</a></li>
+										<li><a href="#">Integer congue euismod</a></li>
+										<li><a href="#">Venenatis vulputate</a></li>
+										<li><a href="#">Morbi ligula volutpat</a></li>
+									</ul>
+								</section>
+								<section class="6u">
+									<ul class="default">
+										<li><a href="#">Donec facilisis tempor</a></li>
+										<li><a href="#">Nulla convallis cursus</a></li>
+										<li><a href="#">Integer congue euismod</a></li>
+										<li><a href="#">Venenatis vulputate</a></li>
+										<li><a href="#">Morbi ligula volutpat</a></li>
+									</ul>
+								</section>
+							</div>
+						</section>
+						<section>
+							<header>
+								<h2>Mauris vulputate</h2>
+							</header>
+							<ul class="style">
+								<li>
+									<p class="posted">May 21, 2014  |  (10 )  Comments</p>
+									<p><a href="#">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</a></p>
+								</li>
+								<li>
+									<p class="posted">May 18, 2014  |  (10 )  Comments</p>
+									<p><a href="#">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</a></p>
+								</li>
+							</ul>
+						</section>
+					</div>
+					-->
+					
+					<!-- Content -->
+					<div id="content" class="8u skel-cell-important">
+						<section>
+							<header>
+								<h2>The Problem</h2>
+								<!--<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>-->
+							</header>
+							<p>Developing countries consist of largely agrarian societies. Over 75% of Kenya's population grows its own food. Impoverished regions in developing countries rely especially on agriculture to make ends meet. In the past, these regions have relied on almanacs and folk wisdom to determine when to plant crops. Unfortunately, these regions have fallen prone to the adverse effects of global warming, and many areas in Kenya have unpredictable weather patterns. These conditions only worsen the severe poverty faced by many in Kenya as these weather patterns can ruin crops. 
+							</p>
+							<p>Flash floods have devastating impacts on agriculture in many nations, but developing countries experience much larger economic effects from these natural disasters. As much as one day of foresight of a flash flood could potentially mean the difference between a successful harvest and an entire season's worth of crops lost.
+							</p>
+							<p>Developed countries rely heavily on modern communication and advanced weather predictions data sets to overcome these problems. While communication infrastructures in developing countries have reached a point where an increasingly large number of people have access to mobile communication devices, these devices have much lower utility than those seen in the developed world. Accurate weather predictions are difficult for these people to access, and many weather predictions that are accessed can only be put to limited use.</p>
+							<p>Solving this problem will potentially lead to a large reduction of poverty in developing nations.</p>
+
+
+							<header>
+								<h2>The Solution</h2>
+								
+							</header>
+							<p>4Cast provides a system that enables farmers in developing nations to use the simple technology they have at their disposal to plan when to plant their crops in order to receive maximum harvests.</p>
+							<p>Using publically available <a href="#">weater data</a>, 4Cast builds upon Microsoft Azure's cognitive services and machine learning algorithms to create statistical models that will help use to predict optimal times for planting and harvesting crops, as well as models that predict flash floods in advance. </p>
+							<p>4Cast uses Microsoft's Azure platform to create a web-based application and integrates the text messaging service Twilio. Farmers can subscribe to receive notifications to this system by sending an SMS message to a phone number associated with the web app. These farmers will then receive notifications on a regular basis about current suggestions of when to plant crops. They will additionally receive alerts when flash flood risks rise.</p>
+						</section>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	<!-- /Main -->
+
+	<!-- Tweet -->
+		<div id="tweet">
+			<div class="container">
+				<section>
+					<blockquote>&ldquo;Keep your data big. Keep your dreams bigger&rdquo; - Emre Yurtbay</blockquote>
+				</section>
+			</div>
+		</div>
+	<!-- /Tweet -->
+
+	
+	{% endblock %}
