@@ -36,7 +36,7 @@ def sendMessage(number, message):
 def index():
     # This uses the REST API to send an http request
     #resp = requests.post("https://api.twilio.com/2010-04-01/Accounts/ACe6dfc70070586ef00b1c5a39c6040522/Messages.json", data={"To":"+19707655549","From":"+19709646126","Body":"Hi!"},auth=("ACe6dfc70070586ef00b1c5a39c6040522","2f49cbdc4d91e523accf22158ca269d2"))
-     sendMessage("+19707655549","Hey Jack, I am finally working!")
+    sendMessage("+19707655549","Hey Jack, I am finally working!")
    
     
     """Renders the home page."""
