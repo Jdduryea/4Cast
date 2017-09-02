@@ -1,7 +1,5 @@
-# Flask for Azure Web Apps [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+# Project 4Cast
 
-Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. And before you ask: It's [BSD licensed](http://flask.pocoo.org/docs/license/).
+Project 4Cast takes advantage of exisiting cellular infrastructures to deliver vital medical information and diagnoses to rural areas in developing countries. Using natural lanuage processing algorithms, 4Cast can respond to any text message anywhere in the world. You can ask 4Cast questions, look up medical information, and receive a diagnosis for your symptoms. 
 
-[Read the documentation or download as PDF](http://flask.pocoo.org/docs/0.10/)
-
-
+Check out the full project at: http://project4cast.azurewebsites.net/
